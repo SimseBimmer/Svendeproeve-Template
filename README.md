@@ -1,28 +1,49 @@
 # Svendeprøve Bagtanker
 
-Run instructions:
+## 🚀 Getting Started
 
+### 1. Install Dependencies
+
+```bash
 npm install react-router-dom
+```
 
-<!-- FRONTEND -->
+---
+
+### 2. Run the Frontend
+
+```bash
 cd Frontend
-npm i
+npm install
 npm run dev
-http://localhost:5173/
+```
+Open: [http://localhost:5173/](http://localhost:5173/)
 
-<!-- BACKEND -->
+---
+
+### 3. Run the Backend
+
+```bash
 cd Backend
-npm i
+npm install
 npm run dev
-http://localhost:3000
+```
+Open: [http://localhost:3000/](http://localhost:3000/)
 
+---
 
-Admin Login:
+## 🔑 Admin Login
 
-brugernavn: info@webudvikler.dk
-password: password
+**Username:** `info@webudvikler.dk`  
+**Password:** `password`
 
-{
-  "username": "info@webudvikler.dk",
-  "password": "password"
-}
+<details>
+  <summary>JSON Example</summary>
+
+  ```json
+  {
+    "username": "info@webudvikler.dk",
+    "password": "password"
+  }
+  ```
+</details>
