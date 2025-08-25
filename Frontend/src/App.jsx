@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss'
 // page imports
 import LandingPage from './pages/LandingPage/LandingPage';
-import Forside from './pages/Forside/Forside';
 import ProductPage from './pages/ProductsPage/ProductPage.jsx';
 import Nyheder from './pages/NewsPage/Nyheder';
 import Kontakt from './pages/ContactPage/Kontakt';
@@ -22,7 +21,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/landing" element={<Forside />} />
         <Route path="/produkter" element={<ProductPage />} />
         <Route path="/produkt/:slug" element={<ProductViewPage />} />
         <Route path="/nyheder" element={<Nyheder />} />

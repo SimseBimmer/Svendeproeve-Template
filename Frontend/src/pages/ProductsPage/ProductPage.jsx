@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Produkter.scss';
 import HeaderComponent from '../../components/Header/HeaderComponent.jsx';
 import ArrowImg from '../../assets/images/Navbar Active.svg';
-import ColorHeart from '../../assets/images/Color.svg';
+import ColorHeart from '../../assets/images/FavoriteBlack.svg';
 import { useLocation, useNavigate } from 'react-router-dom';
 import BreadcrumbNav from '../../components/BreadcrumbNav/BreadcrumbNav.jsx';
 

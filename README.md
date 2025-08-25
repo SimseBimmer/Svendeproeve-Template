@@ -6,11 +6,13 @@ npm install react-router-dom
 
 <!-- FRONTEND -->
 cd Frontend
+npm i
 npm run dev
 http://localhost:5173/
 
 <!-- BACKEND -->
 cd Backend
+npm i
 npm run dev
 http://localhost:3000
 
