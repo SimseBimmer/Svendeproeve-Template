@@ -65,14 +65,7 @@ export default function Login() {
                     <h2>Login</h2>
                     <p>Indtast og send username og password for at logge ind.</p>
                     <form id="loginForm" onSubmit={handleLogin}>
-                        <input
-                            type="text"
-                            placeholder="Indtast dit brugernavn"
-                            value={username}
-                            onChange={e => setUsername(e.target.value)}
-                            id="loginUsername"
-                            autoComplete="username"
-                        />
+                        <input type="text" placeholder="Indtast dit brugernavn" value={username} onChange={e => setUsername(e.target.value)} id="loginUsername" autoComplete="username"/>
                         <input
                             type="password"
                             placeholder="Indtast dit password"

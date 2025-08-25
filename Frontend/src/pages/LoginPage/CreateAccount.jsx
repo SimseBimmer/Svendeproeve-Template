@@ -69,30 +69,9 @@ export default function CreateAccount() {
                     <h2>Opret konto</h2>
                     <p>Indtast navn, email og adgangskode for at oprette en konto.</p>
                     <form id="loginForm" onSubmit={handleCreate}>
-                        <input
-                            type="text"
-                            placeholder="Indtast dit navn"
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                            id="createName"
-                            autoComplete="name"
-                        />
-                        <input
-                            type="email"
-                            placeholder="Indtast din email"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
-                            id="createEmail"
-                            autoComplete="email"
-                        />
-                        <input
-                            type="password"
-                            placeholder="Indtast dit password"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)}
-                            id="createPassword"
-                            autoComplete="new-password"
-                        />
+                        <input type="text" placeholder="Indtast dit navn" value={name} onChange={e => setName(e.target.value)} id="createName" autoComplete="name"/>
+                        <input type="email" placeholder="Indtast din email" value={email} onChange={e => setEmail(e.target.value)} id="createEmail" autoComplete="email" />
+                        <input type="password" placeholder="Indtast dit password" value={password} onChange={e => setPassword(e.target.value)} id="createPassword" autoComplete="new-password" />
                         <button type="submit" id="loginBtn" disabled={loading}>
                             {loading ? 'Opretter...' : 'Opret konto'}
                         </button>

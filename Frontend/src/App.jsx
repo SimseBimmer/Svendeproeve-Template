@@ -13,7 +13,6 @@ import MinSide from './pages/MinSidePage/MinSide.jsx';
 import CreateAccount from './pages/LoginPage/CreateAccount.jsx';
 import ProductViewPage from './pages/ProductViewPage/ProductViewPage.jsx';
 // component imports 
-import NavComponent from './components/NavComponent/NavComponent.jsx';
 import FooterComponent from './components/Footer/FooterComponent.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
