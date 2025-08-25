@@ -1,0 +1,80 @@
+@use '../../styles/variables.scss' as *;
+@use 'sass:color';
+
+
+#loginPage {}
+
+
+#loginContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+#loginContent {
+    margin: 2rem 0 0 0;
+    width: 40%;
+
+    h2 {
+        font-size: 2.2rem;
+        color: $color-dark-grey;
+        font-weight: 400;
+        margin: 0 0 1rem 0;
+    }
+
+    p {
+        font-size: 1rem;
+        color: $color-dark-grey;
+        margin-bottom: 1.5rem;
+    }
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    input {
+        font-size: 1.1rem;
+        padding: 0.7rem 1rem;
+        border-radius: 5px;
+        border: 1px solid #dddddd;
+        background: #f9f9f9;
+        outline: none;
+        transition: border 0.2s;
+
+        &:focus {
+            border: 1.5px solid $color-baked-yellow;
+        }
+    }
+
+    #loginBtn {
+        width: fit-content;
+        margin: 0 0 0 auto;
+        background: $color-blue-grey;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: .5rem 2.5rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            background: color.adjust($color-baked-yellow, $lightness: -15%);
+        }
+
+        &:disabled {
+            background: color.adjust($color-baked-yellow, $lightness: 30%);
+            cursor: not-allowed;
+        }
+    }
+
+    #loginError {
+        color: red;
+        margin-top: 0.5rem;
+        text-align: left;
+        // fejlbesked
+    }
+}

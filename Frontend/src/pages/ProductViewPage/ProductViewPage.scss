@@ -1,0 +1,330 @@
+@use '../../styles/variables.scss' as *;
+
+#productViewPage {
+    font-family: $font-main;
+    background: $color-light-grey;
+    min-height: 100vh;
+
+    #breadCrumbNav {
+        width: 70%;
+        margin: 2rem auto 1.5rem auto;
+    }
+
+    #productViewContent {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    #productDetails {
+        flex: 2;
+
+        #productTitle {
+            font-size: 2.2rem;
+            color: #000000;
+            font-weight: 400;
+            margin-bottom: 1.2rem;
+        }
+
+        #imageAndDetails {
+            display: flex;
+            gap: 1.5rem;
+
+            #productImage {
+                width: 260px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+                background: $color-light-grey;
+                border: 1px solid $color-light-grey;
+            }
+
+            #productTextDetails {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                #productDescription {
+                    font-size: 1.15rem;
+                    color: #000000;
+                    margin-bottom: 1.2rem;
+                    line-height: 1.7;
+                    font-weight: 400;
+                    letter-spacing: 0.01em;
+                    max-width: 500px;
+                }
+            }
+        }
+
+        #instructionsBox {
+            margin-top: 1.5rem;
+
+            #instructions {
+                font-size: 1.1rem;
+                color: #000000;
+                line-height: 1.7;
+                font-weight: 400;
+                letter-spacing: 0.01em;
+                max-width: 700px;
+            }
+        }
+
+        #productPrice {
+            font-size: 2.4rem;
+            color: #000000;
+            font-weight: 700;
+            margin-top: 4rem;
+        }
+    }
+
+    #recipeCard {
+        flex: 1;
+        width: 350px;
+        background: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        font-family: $font-main;
+        margin: 0 auto 2rem auto;
+        border: none;
+
+        #recipeCardHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $color-blue-grey;
+            color: $color-light-grey;
+            padding: 1rem 1.2rem 0.7rem 1.2rem;
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin: 0;
+            }
+
+            #recipeCardLikes {
+                display: flex;
+                align-items: center;
+                gap: 0.3rem;
+                font-size: 1.1rem;
+
+                img {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+        }
+
+        #productInfoBox {
+            background: #e9e9e6;
+            color: $color-blue-grey;
+            font-size: 1.1rem;
+            padding: 0.7rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            border-bottom: 1px solid #e0e0e0;
+
+            div {
+                padding: 0.2rem 0;
+                border-bottom: 1px solid #e0e0e0;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        #ingredientList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: $color-light-grey;
+
+            li {
+                padding: 0.7rem 1.2rem;
+                border-bottom: 1px solid #e0e0e0;
+                color: $color-blue-grey;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    #commentSection {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #eee;
+
+        h3 {
+            font-size: 1.3rem;
+            color: #000;
+            margin-bottom: 1rem;
+        }
+
+        #commentForm {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            margin-bottom: 1.5rem;
+
+            textarea {
+                font-size: 1.1rem;
+                padding: 0.7rem 1rem;
+                border-radius: 5px;
+                border: 1px solid #dddddd;
+                background: #f9f9f9;
+                color: #323540;
+                resize: vertical;
+            }
+
+            button {
+                width: fit-content;
+                align-self: flex-end;
+                background: #5f657b;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: .5rem 2.5rem;
+                font-size: 1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.2s;
+
+                &:hover {
+                    background: #b7a968;
+                }
+
+                &:disabled {
+                    background: #e0c3a0;
+                    cursor: not-allowed;
+                }
+            }
+
+            .commentError {
+                color: #d9534f;
+                font-size: 1rem;
+            }
+
+            .commentSuccess {
+                color: #4BB543;
+                font-size: 1rem;
+            }
+        }
+
+        .commentLoginMsg {
+            color: #5f657b;
+            margin-bottom: 1.5rem;
+        }
+
+        #commentList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+
+            .commentItem {
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+
+                .commentUserImg {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    background: #eee;
+                }
+
+                .commentUserName {
+                    font-weight: 600;
+                    color: #323540;
+                    margin-bottom: 0.2rem;
+                }
+
+                .commentText {
+                    color: #323540;
+                    font-size: 1.1rem;
+                }
+            }
+
+            // scroll kun på mobil
+            @media (max-width: 600px) {
+                max-height: 200px;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+// --- Mobile styles (placeret i bunden for overblik) ---
+@media (max-width: 900px) {
+    #productViewPage {
+        #productViewContent {
+            width: 95%;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        #productDetails {
+            width: 100%;
+        }
+
+        #recipeCard {
+            width: 100%;
+            margin: 0 0 2rem 0;
+            flex: unset;
+        }
+
+        #commentSection {
+            width: 100%;
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #productViewPage {
+        #productViewContent {
+            width: 100%;
+            padding: 0 0.5rem;
+        }
+
+        #productDetails {
+            #imageAndDetails {
+                flex-direction: column;
+                align-items: flex-start;
+
+                #productImage {
+                    width: 100%;
+                    max-width: 320px;
+                    height: auto;
+                }
+            }
+
+            #productPrice {
+                font-size: 1.5rem;
+                margin-top: 2rem;
+            }
+        }
+
+        #recipeCard {
+            width: 100%;
+            margin: 1.5rem 0 2rem 0;
+        }
+
+        #commentSection {
+            width: 100%;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+
+            #commentList {
+                max-height: 200px;
+                overflow-y: auto;
+            }
+        }
+    }
+}
