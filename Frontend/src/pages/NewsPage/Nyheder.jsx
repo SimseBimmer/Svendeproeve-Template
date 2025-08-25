@@ -59,9 +59,6 @@ export default function Nyheder() {
                     ) : (
                         <>
                             <h1 id="newsTitle">{selected.title}</h1>
-                            <div id="newsDate">
-                                {/* evt. vis dato hvis du har det */}
-                            </div>
                             <img
                                 id="newsMainImage"
                                 src={selected.imageUrl.startsWith('http') ? selected.imageUrl : 'http://localhost:3000' + selected.imageUrl}

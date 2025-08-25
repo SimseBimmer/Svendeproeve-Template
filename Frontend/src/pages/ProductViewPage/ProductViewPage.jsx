@@ -20,7 +20,7 @@ export default function ProductViewPage() {
     }, [slug]);
 
     const crumbLinks = [
-        '/', // Home
+        '/',
         '/produkter'
     ];
 
@@ -63,7 +63,6 @@ export default function ProductViewPage() {
                         <header id="recipeCardHeader">
                             <h2>Opskrift</h2>
                             <div id="recipeCardLikes">
-                                <span>{product.favorites?.length || 0}</span>
                                 <img src={ColorHeartWhite} alt="Antal likes" />
                             </div>
                         </header>
