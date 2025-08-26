@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './LandingPage.scss';
-import LandingHeaderComponent from '../../components/LandingHeader/LandingHeaderComponent.jsx';
 import { useNavigate } from 'react-router-dom';
 
 // Hovedside med nyheder
@@ -28,7 +27,6 @@ export default function LandingPage() {
 
   return (
     <div id='LandingPage'>
-      <LandingHeaderComponent />
       <div id='ContentContainer'>
         <div id='MainContentContainer'>
           <h2>Nyheder</h2>
@@ -41,17 +39,9 @@ export default function LandingPage() {
               <ul id='NewsList'>
                 {/* Mapper over nyheder og viser dem */}
                 {news.map(article => (
-                  <li
-                    id='NewsArticle'
-                    key={article.id}
-                    style={{ cursor: 'pointer' }}
-                    onClick={() => navigate(`/nyheder`, { state: { slug: article.slug } })}
-                  >
-                    <img
-                      // Sørger for at billed-link virker både hvis det er absolut eller relativt
-                      src={article.imageUrl.startsWith('http') ? article.imageUrl : 'http://localhost:3000' + article.imageUrl}
-                      alt={article.title}
-                    />
+                  <li id='NewsArticle' key={article.id} style={{ cursor: 'pointer' }} onClick={() => navigate(`/nyheder`, { state: { slug: article.slug } })} >
+                    {/* Sørger for at billed-link virker både hvis det er absolut eller relativt */}
+                    <img src={article.imageUrl.startsWith('http') ? article.imageUrl : 'http://localhost:3000' + article.imageUrl} alt={article.title} />
                     <div>
                       <p>18 august 2024:</p>
                       <h3>{article.title}</h3>
